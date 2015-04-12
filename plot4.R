@@ -1,7 +1,5 @@
 data<-read.table("household_power_consumption.txt", header=TRUE, sep=";")
 
-###########################################################################################
-
 data2days<-subset(data, (Date=="1/2/2007")|(Date=="2/2/2007"))
 data2days$Date<-as.Date(data2days$Date, format="%d/%m/%Y")
 data2days$Day<-weekdays(as.Date(data2days$Date))
